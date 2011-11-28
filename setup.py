@@ -10,9 +10,8 @@ ext = Extension(
     language="c++",              # this causes Cython to create C++ source
     include_dirs=[SOURCEMOD_PATH + '/public', SOURCEMOD_PATH + '/public/sourcepawn', SOURCEMOD_PATH + '/sourcepawn/jit' ],          # usual stuff
     libraries=[  ],             # ditto
-    extra_link_args=[ 'sourcepawn.jit.x86.dylib' ],       # if needed
-    cmdclass = { 'build_ext': build_ext }
-    )
+    extra_link_args=[ 'sourcepawn.jit.x86.dylib' ],
+)
 
 setup(
     cmdclass = { 'build_ext': build_ext },
